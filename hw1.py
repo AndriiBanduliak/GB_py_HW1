@@ -1,29 +1,10 @@
-'''Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-*Пример:*
-- 6 -> да
-- 7 -> да
-- 1 -> нет'''
+#2. Напишите программу для. проверки истинности 
+# утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для 
+# всех значений предикат.
 
-
-def InputNumbers(inputText):
-    is_OK = False
-    while not is_OK:
-        try:
-            number = int(input(f"{inputText}"))
-            is_OK = True
-        except ValueError:
-            print("It's mot a number!")
-    return number
-
-
-def checkNumber(num):
-    if 6 <= num <= 7:
-        print("It's a weekend! :)")
-    elif 0 < num < 6:
-        print("It's a work day")
-    else:
-        print("Number outside 7 days")
-
-
-num = InputNumbers("Enter the number of the day: ")
-checkNumber(num)
+print("x y z")
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            if not (x or y or z)==(not x and not y and not z):
+                print(x, y, z)
