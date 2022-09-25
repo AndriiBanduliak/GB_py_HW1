@@ -1,29 +1,20 @@
-'''Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-*Пример:*
-- 6 -> да
-- 7 -> да
-- 1 -> нет'''
+'''4. Напишите программу, которая по заданному номеру четверти, показывает 
+диапазон возможных координат точек в этой четверти (x и y). - x=34; y=-30 -> 4
+- x=2; y=4-> 1
+- x=-34; y=-30 -> 3'''
 
 
-def InputNumbers(inputText):
-    is_OK = False
-    while not is_OK:
-        try:
-            number = int(input(f"{inputText}"))
-            is_OK = True
-        except ValueError:
-            print("It's mot a number!")
-    return number
 
-
-def checkNumber(num):
-    if 6 <= num <= 7:
-        print("It's a weekend! :)")
-    elif 0 < num < 6:
-        print("It's a work day")
-    else:
-        print("Number outside 7 days")
-
-
-num = InputNumbers("Enter the number of the day: ")
-checkNumber(num)
+X=int(input('Enter the x '))
+Y=int(input('Enter the y '))
+    
+if X > 0 and  Y > 0:
+    print("The point in the 1th quarter ")
+elif X < 0 and Y > 0:
+    print('The point in the 2nd quarter')
+elif X <0 and Y < 0:
+    print('The point in the 3rd quarter')
+elif X > 0 and Y < 0:
+    print('The point in the 4th quarter')
+else:
+    print("It's the center of the coordinates")
