@@ -1,29 +1,16 @@
-'''Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-*Пример:*
-- 6 -> да
-- 7 -> да
-- 1 -> нет'''
+""" Напишите программу, которая принимает на вход координаты двух точек 
+и находит расстояние между ними в 2D пространстве. 
+Пример: - A (3,6); B (2,1) -> 5,09 - A (7,-5); B (1,-1) -> 7,21 """
 
+print("Задайте координаты точки А")
+x1 = int(input("1: "))
+x2 = int(input("2: "))
+print(x1, x2)
 
-def InputNumbers(inputText):
-    is_OK = False
-    while not is_OK:
-        try:
-            number = int(input(f"{inputText}"))
-            is_OK = True
-        except ValueError:
-            print("It's mot a number!")
-    return number
+print("Задайте координаты точки B")
+y1 = int(input("1: "))
+y2 = int(input("2: "))
+print(y1, y2)
 
-
-def checkNumber(num):
-    if 6 <= num <= 7:
-        print("It's a weekend! :)")
-    elif 0 < num < 6:
-        print("It's a work day")
-    else:
-        print("Number outside 7 days")
-
-
-num = InputNumbers("Enter the number of the day: ")
-checkNumber(num)
+result = pow( ( ( (y1 - x1) * (y1 - x1) ) + ( (y2 - x2) * (y2 - x2) ) ), 0.5)
+print(round(result,3))
